@@ -4,10 +4,9 @@
 
 #define INPUTS 5
 
-class Buttons {
+class Inputs {
 public:
-    Buttons();
-    ~Buttons();
+    Inputs();
 
     void pollStates();
 

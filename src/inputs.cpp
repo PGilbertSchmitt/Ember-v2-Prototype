@@ -1,6 +1,6 @@
-#include "buttons.hpp"
+#include "inputs.hpp"
 
-Buttons::Buttons()
+Inputs::Inputs()
 {
     // Initialize button states to Up regardless of actual state
     for (int i = 0; i < INPUTS; i++){
@@ -15,10 +15,7 @@ Buttons::Buttons()
     buttonMap[Space] = sf::Keyboard::Space;
 }
 
-Buttons::~Buttons()
-{}
-
-void Buttons::pollStates()
+void Inputs::pollStates()
 {
     //Do Something
 }
