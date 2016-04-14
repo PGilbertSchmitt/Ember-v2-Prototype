@@ -3,7 +3,7 @@
 Inputs::Inputs()
 {
     // Initialize button states to Up regardless of actual state
-    for (int i = 0; i < INPUTS; i++){
+    for (int i = 0; i < NUM_OF_INPUTS; i++){
         currentStates[i] = Up;
     }
 
@@ -17,5 +17,34 @@ Inputs::Inputs()
 
 void Inputs::pollStates()
 {
-    //Do Something
+    for (int i = 0; i < NUM_OF_INPUTS; i++){
+        sf::Keyboard::Key key = buttonMap.at(static_cast<buttonIndex>(i));
+        bool keyDown = sf::Keyboard::isKeyPressed(key);
+        setState(i, keyDown);
+    }
+}
+
+void Inputs::setState(int index, bool keyState)
+{
+    /* Regardless of the keyState, if the state of an input is transitional
+     * (ie Pressed or Released), then it must continue the transition
+     *
+     * Transitions per step (represented as ->):
+     * Up (if pressed) -> Pressed -> Down
+     * Down (if not pressed) -> Released -> Up
+     */
+    if (currentStates[index] == Pressed){
+        currentStates[index] = Down;
+    } else
+    if (currentStates[index] == Released){
+        currentStates[index] = Up;
+    } else {
+        // Now to set the transition if it isn't currently so
+        if (currentStates[index] == Up && keyState){
+            currentStates[index] = Pressed;
+        } else
+        if (currentStates[index] == Down && !keyState){
+            currentStates[index] = Released;
+        }
+    }
 }

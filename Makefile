@@ -12,6 +12,7 @@
 CFLAGS	= -Wall -std=c++11
 SRCDIR	= src
 IPATH	= -I include
+LIBPATH	= -lsfml-window -lsfml-system
 
 # Set compiler specific options
 
@@ -19,11 +20,11 @@ CC		= g++
 OBJDIR	= obj
 TARGET	= main
 
-objects	= $(addprefix $(OBJDIR)/, main.o buttons.o)
+objects	= $(addprefix $(OBJDIR)/, main.o inputs.o)
 # Note to future self, figure out how to automagically list the files
 
 main : $(objects)
-	$(CC) $(CFLAGS) -o $(TARGET) $(objects)
+	$(CC) $(CFLAGS) $(objects) -o $(TARGET) $(LIBPATH)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) $(CFLAGS) $(IPATH) -c $< -o $@

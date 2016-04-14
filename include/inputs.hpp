@@ -2,7 +2,7 @@
 #include <iostream>
 #include <map>
 
-#define INPUTS 5
+#define NUM_OF_INPUTS 5
 
 class Inputs {
 public:
@@ -30,5 +30,6 @@ private:
 
     std::map<buttonIndex,sf::Keyboard::Key> buttonMap;
 
-    buttonState currentStates[INPUTS];
+    buttonState currentStates[NUM_OF_INPUTS];
+    void setState(int,bool); // Sets values in currentStates at index
 };
