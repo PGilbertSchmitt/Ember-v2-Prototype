@@ -1,9 +1,13 @@
 #include <SFML/Window/Keyboard.hpp>
+#include <iostream>
+#include <map>
+
+#define INPUTS 5
 
 class Buttons {
 public:
-    void Buttons();
-    void ~Buttons();
+    Buttons();
+    ~Buttons();
 
     void pollStates();
 
@@ -16,13 +20,16 @@ private:
         Released
     };
 
-    enum buttons {
+    enum buttonIndex {
         A = 0,
         S,
         D,
         F,
-        Space
+        Space,
+        keyCount
     };
 
-    buttonState currentStates[5];
+    std::map<buttonIndex,sf::Keyboard::Key> buttonMap;
+
+    buttonState currentStates[INPUTS];
 };

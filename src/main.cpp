@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    
+    Buttons buttons;
     return 0;
 }
