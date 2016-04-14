@@ -24,6 +24,16 @@ void Inputs::pollStates()
     }
 }
 
+int Input::getState(int index)
+{
+    if (index >= NUM_OF_INPUTS){
+        std::cout << "Out of bounds" << std::endl;
+        return 0;
+    } else {
+        return static_cast<int>(currentStates[index]);
+    }
+}
+
 void Inputs::setState(int index, bool keyState)
 {
     /* Regardless of the keyState, if the state of an input is transitional

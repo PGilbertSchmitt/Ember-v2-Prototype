@@ -9,6 +9,7 @@ public:
     Inputs();
 
     void pollStates();
+    int getState(int);
 
 private:
     enum buttonState
