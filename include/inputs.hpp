@@ -1,3 +1,6 @@
+#ifndef INPUTS_HPP
+#define INPUTS_HPP
+
 #include <SFML/Window/Keyboard.hpp>
 #include <iostream>
 #include <map>
@@ -34,3 +37,5 @@ private:
     buttonState currentStates[NUM_OF_INPUTS];
     void setState(int,bool); // Sets values in currentStates at index
 };
+
+#endif

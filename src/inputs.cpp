@@ -24,7 +24,7 @@ void Inputs::pollStates()
     }
 }
 
-int Input::getState(int index)
+int Inputs::getState(int index)
 {
     if (index >= NUM_OF_INPUTS){
         std::cout << "Out of bounds" << std::endl;

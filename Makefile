@@ -20,7 +20,7 @@ CC		= g++
 OBJDIR	= obj
 TARGET	= main
 
-objects	= $(addprefix $(OBJDIR)/, main.o inputs.o)
+objects	= $(addprefix $(OBJDIR)/, main.o inputs.o seat.o)
 # Note to future self, figure out how to automagically list the files
 
 main : $(objects)
