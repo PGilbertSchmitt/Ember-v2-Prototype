@@ -10,11 +10,7 @@
 class Inputs {
 public:
     Inputs();
-
-    void pollStates();
-    int getState(int);
-
-private:
+    
     enum buttonState
     {
         Up = 0,
@@ -23,6 +19,11 @@ private:
         Released
     };
 
+    void pollStates();
+
+    buttonState getState(int);
+
+private:
     enum buttonIndex {
         A = 0,
         S,
@@ -35,6 +36,7 @@ private:
     std::map<buttonIndex,sf::Keyboard::Key> buttonMap;
 
     buttonState currentStates[NUM_OF_INPUTS];
+
     void setState(int,bool); // Sets values in currentStates at index
 };
 

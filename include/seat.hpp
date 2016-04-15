@@ -3,16 +3,14 @@
 
 #include <iostream>
 #include <deque>
+#include "inputs.hpp"
 
 class Seat {
 public:
-    Seat(std::deque<int> &_seatOrder, const int _index)
-        : seatOrder(_seatOrder)
-        , index(_index)
-        {}
+    Seat(std::deque<int>&, const int);
 
     int getIndex();
-
+    const Inputs *inputs;
 private:
     std::deque<int> & seatOrder;
     const int index;

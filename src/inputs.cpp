@@ -24,13 +24,13 @@ void Inputs::pollStates()
     }
 }
 
-int Inputs::getState(int index)
+Inputs::buttonState Inputs::getState(int index)
 {
-    if (index >= NUM_OF_INPUTS){
+    if (index >= NUM_OF_INPUTS || index < 0){
         std::cout << "Out of bounds" << std::endl;
-        return 0;
+        return Up;
     } else {
-        return static_cast<int>(currentStates[index]);
+        return currentStates[index];
     }
 }
 

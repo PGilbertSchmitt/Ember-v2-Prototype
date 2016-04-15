@@ -1,6 +1,8 @@
 #include "main.hpp"
 
 int main() {
+    // Make sure all 
+
     /*
     while(true){
          // For every iteration of the loop, the currentStates array holds the
