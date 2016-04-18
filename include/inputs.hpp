@@ -5,12 +5,12 @@
 #include <iostream>
 #include <map>
 
-#define NUM_OF_INPUTS 5
+#define NUM_OF_INPUTS 6
 
 class Inputs {
 public:
     Inputs();
-    
+
     enum buttonState
     {
         Up = 0,
@@ -21,7 +21,7 @@ public:
 
     void pollStates();
 
-    buttonState getState(int);
+    buttonState getState(int) const;
 
 private:
     enum buttonIndex {
@@ -30,6 +30,7 @@ private:
         D,
         F,
         Space,
+        Q,
         keyCount
     };
 

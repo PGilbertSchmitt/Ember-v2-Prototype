@@ -1,0 +1,6 @@
+#!/bin/bash
+# turn off echoing, run main, then turn echoing back on
+
+stty -echo
+./main
+stty echo

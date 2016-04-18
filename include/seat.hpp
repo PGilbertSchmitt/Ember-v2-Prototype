@@ -11,6 +11,8 @@ public:
 
     int getIndex();
     const Inputs *inputs;
+
+    void update();
 private:
     std::deque<int> & seatOrder;
     const int index;

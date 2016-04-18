@@ -12,3 +12,10 @@ The program will be run on a Raspberry Pi running underneath the platform.
 
 ## Artist's Disclaimer
 Many of the smaller details and some of the principle implementation is likely to change. As is the case art, even the most specific vision can change with seemingly no reason. This prototype represents the current idea and it's implementation.
+
+## Running the Project
+Currently, the project is run from the command line of a Linux environment. The prettiness of the output is done with printed escape codes. The output of pressed keys is stifled by using a script to call `stty -echo`, running main, then calling `stty echo` to return character output to the keyboard. I don't know enough about Linux terminal output to fix the stifled output from echoing onto the command line after program execution, but this is a minor detail.
+
+## Contact
+If there are any questions regarding the project's technical aspects, or if you have any advice or recommendations, please feel free to send me an email at:
+*PGilbertSchmitt@gmail.com*

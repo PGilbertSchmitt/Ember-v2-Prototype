@@ -12,6 +12,7 @@ Inputs::Inputs()
     buttonMap[S] = sf::Keyboard::S;
     buttonMap[D] = sf::Keyboard::D;
     buttonMap[F] = sf::Keyboard::F;
+    buttonMap[Q] = sf::Keyboard::Q;
     buttonMap[Space] = sf::Keyboard::Space;
 }
 
@@ -23,10 +24,9 @@ void Inputs::pollStates()
         setState(i, keyDown);
         std::cout << getState(i) << " ";
     }
-    std::cout << std::endl;
 }
 
-Inputs::buttonState Inputs::getState(int index)
+Inputs::buttonState Inputs::getState(int index) const
 {
     if (index >= NUM_OF_INPUTS || index < 0){
         std::cout << "Out of bounds" << std::endl;
