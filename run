@@ -3,4 +3,5 @@
 
 stty -echo
 ./main
+clear
 stty echo

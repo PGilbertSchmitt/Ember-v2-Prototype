@@ -11,11 +11,11 @@ using namespace std;
 Inputs inputs;          // Starts up the input reader
 deque<int> seatOrder;   // Stores the order in which current seats are pressed
 Seat seatlist[] = {     // Stores the actual seats themselves
-    {seatOrder, 0},
-    {seatOrder, 1},
-    {seatOrder, 2},
-    {seatOrder, 3},
-    {seatOrder, 4}
+    {seatOrder, 0, "a.txt"},
+    {seatOrder, 1, "b.txt"},
+    {seatOrder, 2, "c.txt"},
+    {seatOrder, 3, "d.txt"},
+    {seatOrder, 4, "e.txt"}
 };
 
 #endif

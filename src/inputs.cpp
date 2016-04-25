@@ -22,7 +22,6 @@ void Inputs::pollStates()
         sf::Keyboard::Key key = buttonMap.at(static_cast<buttonIndex>(i));
         bool keyDown = sf::Keyboard::isKeyPressed(key);
         setState(i, keyDown);
-        std::cout << getState(i) << " ";
     }
 }
 

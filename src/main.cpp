@@ -6,7 +6,7 @@ int main() {
         seatlist[i].inputs = &inputs;
     }
 
-    cout << "\033c\033[0;0f"; // Just for pretty output
+    //cout << "\033c\033[0;0f"; // Just for pretty output
 
     while(true){
          // For every iteration of the loop, the currentStates array holds the
@@ -14,7 +14,12 @@ int main() {
          // the update function will constantly check the currentStates for
          // instructions on what to do next
         inputs.pollStates();
-        cout << "\033[0;0f"; // Pretty output
+
+        for (int i = 0; i < NUM_OF_SEATS; i++){
+            seatlist[i].update();
+        }
+
+        //cout << "\033[0;0f"; // Pretty output
 
         if (inputs.getState(5) == Inputs::Pressed){
             cout << "Quit" << endl;
