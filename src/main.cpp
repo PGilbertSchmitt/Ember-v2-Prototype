@@ -22,7 +22,11 @@ int main() {
         //cout << "\033[0;0f"; // Pretty output
 
         if (inputs.getState(5) == Inputs::Pressed){
-            cout << "Quit" << endl;
+            cout << "Quiting..." << endl;
+            for (int i = 0; i < NUM_OF_SEATS; i++){
+                seatlist[i].save();
+            }
+            cout << "Done!" << endl;
             break;
         }
     }

@@ -12,7 +12,7 @@
 CFLAGS	= -Wall -std=c++11
 SRCDIR	= src
 IPATH	= -I include
-LIBPATH	= -lsfml-window -lsfml-system
+LIBPATH	= -lsfml-audio -lsfml-window -lsfml-system
 
 # Set compiler specific options
 
@@ -20,7 +20,7 @@ CC		= g++
 OBJDIR	= obj
 TARGET	= main
 
-objects	= $(addprefix $(OBJDIR)/, main.o inputs.o seat.o noteList.o)
+objects	= $(addprefix $(OBJDIR)/, main.o inputs.o seat.o noteList.o customStream.o)
 # Note to future self, figure out how to automagically list the files
 
 main : $(objects)

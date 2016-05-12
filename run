@@ -1,7 +1,14 @@
 #!/bin/bash
 # turn off echoing, run main, then turn echoing back on
 
+SECONDS=0
+touch seconds.txt
+echo "Program execution at: $(date)" >> seconds.txt
+
 stty -echo
 ./main
 clear
 stty echo
+
+echo "Program quits at: $(date)" >> seconds.txt
+echo "Program lasted: $SECONDS seconds/n-----/n" >> seconds.txt
