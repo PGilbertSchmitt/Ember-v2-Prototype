@@ -10,6 +10,7 @@ class CustomStream : public sf::SoundStream
 {
 public:
     void open(const std::deque<char>&, float);
+    void resetLoc();
 
 private:
     bool onGetData(Chunk&);

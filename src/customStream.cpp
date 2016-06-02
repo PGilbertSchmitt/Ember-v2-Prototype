@@ -13,6 +13,11 @@ void CustomStream::open(const std::deque<char>& list, float _seconds)
     initialize(channelCount, sampleRate);
 }
 
+void CustomStream::resetLoc()
+{
+    listLoc = 0;
+}
+
 /* PRIVATE FUNCTIONS */
 bool CustomStream::onGetData(Chunk& data)
 {
@@ -25,6 +30,7 @@ bool CustomStream::onGetData(Chunk& data)
         return true;
     } else {
         std::cout << "No more to play." << std::endl;
+        listLoc = 0;
         return false;
     }
 }

@@ -11,4 +11,5 @@ clear
 stty echo
 
 echo "Program quits at: $(date)" >> seconds.txt
-echo "Program lasted: $SECONDS seconds/n-----/n" >> seconds.txt
+echo "Program lasted: $SECONDS seconds" >> seconds.txt
+echo "" >> seconds.txt

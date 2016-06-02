@@ -19,6 +19,7 @@ void Seat::update()
         timeOfPress = timer::now();
 
         // Here, we begin the sound player for this seat
+        soundPlayer.resetLoc();
         soundPlayer.play();
     } else if (state == Inputs::Released){
         auto timeOfRelease = timer::now();
